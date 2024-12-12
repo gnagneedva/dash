@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Core Banking</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-gray-100 p-4 font-sans">
+    <h1 class="text-xl font-bold mb-4">Core Banking</h1>
+    <div class="grid grid-cols-1 lg:grid-cols-4 gap-4 h-screen p-4">
+      <!-- Sidebar gauche -->
+      <aside class="col-span-1 bg-white shadow-md p-4 rounded-lg">
+        <div class="flex items-center justify-between bg-white p-4 mt-4">
+          <span>Liste</span>
+          <div class="flex gap-2">
+            <button
+              class="text-gray-700 px-3 py-1 rounded disabled:opacity-50"
+              disabled
+            >
+              &lt;
+            </button>
+            <div class="flex space-x-2">
+              <span class="shadow px-3 py-1 rounded">1</span>
+              <span class="text-gray-700 px-3 py-1 rounded">2</span>
+              <span class="px-3 py-1">...</span>
+              <span class="text-gray-700 px-3 py-1 rounded">8</span>
+            </div>
+            <button class="text-gray-700 px-3 py-1 rounded">&gt;</button>
+          </div>
+        </div>
+
+        <input
+          type="text"
+          placeholder="Recherche"
+          class="w-full p-2 mb-4 bg-gray-100 rounded full"
+        />
+        <ul class="space-y-4">
+          <li
+            class="p-4 border border-gray-300 rounded flex items-center justify-between hover:bg-gray-100 cursor-pointer"
+          >
+          
+            <span class="font-medium">LN1235</span>
+            <span class="bg-slate-100 rounded-full py-2 px-3">Actif</span>
+          </li>
+        </ul>
+      </aside>
+
+      <!-- Section centrale -->
+      <main
+        class="col-span-1 lg:col-span-2 bg-gray-50 rounded-lg p-6 space-y-6"
+      >
+        <!-- Section principale -->
+        <div class="bg-[#D6E6FF] rounded-lg shadow-md p-4">
+          <div class="flex flex-wrap mb-4 justify-between items-center">
+            <div class="flex gap-4">
+
+                <h2 class="text-lg font-semibold">LN1235 - John Doe</h2>
+                <span class="bg-green-500 text-white text-sm px-2 py-1 rounded"
+                  >Actif</span
+                >
+            </div>
+            <span class=" text-sm px-2 py-1 rounded"
+              >...</span
+            >
+          </div>
+          <hr>
+          <div
+            class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 mt-4"
+          >
+            <div class="flex flex-col"><span class="font-medium">Téléphone:</span> 07 07 76 78 01</div>
+            <div class="flex flex-col"><span class="font-medium">Ajouté par:</span> Denis Ouattara</div>
+            <div class="flex flex-col">
+              <span class="font-medium">Début d'exercice:</span>
+              <span class="">16/06/2024</span>
+            </div>
+            <div class="flex flex-col">
+              <span class="font-medium">Retards:</span>
+              <span class="">6</span>
+            </div>
+            <div class="flex flex-col">
+              <span class="font-medium">Transactions:</span>
+              <span class="">10</span>
+            </div>
+            <div class="flex flex-col">
+              <span class="font-medium">Reçus:</span>
+              <span class="text-green-500">82.000.000 XOF</span>
+            </div>
+            <div class="flex flex-col">
+              <span class="font-medium">Retard paiement:</span>
+              <span class="text-red-500">104.000.000 XOF</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Section Décembre 2024 -->
+        <div class="bg-white rounded-lg shadow-md p-4">
+          <div class="flex flex-wrap justify-between items-center mb-4">
+            <select class="border rounded p-2 w-full sm:w-auto">
+              <option>2024</option>
+              <!-- autres options -->
+            </select>
+            <div class="flex gap-3">
+              <button class="bg-green-500 text-white px-4 py-2 rounded">
+                Relancer
+              </button>
+              <button class="bg-indigo-500 text-white rounded px-4 py-2">
+                Insertion Pénalités
+              </button>
+            </div>
+          </div>
+          <hr />
+          <div class="">
+            <!-- Calendrier et actions -->
+            <div class="w-full">
+              <div
+                class="flex flex-wrap justify-between items-center mb-4 space-y-2 sm:space-y-0"
+              >
+                
+              </div>
+              <hr />
+              <div class="grid grid-cols-1 gap-3 pt-3 md:grid-cols-3">
+                <div class="flex  gap-3 flex-col">
+                    <select class="border rounded p-2 w-full sm:w-auto">
+                        <option>Décembre</option>
+                        <!-- autres options -->
+                      </select>
+                      <hr />
+                    <div class="grid grid-cols-7 gap- text-center">
+                      <span class="font-medium">Lu</span>
+                      <span class="font-medium">Ma</span>
+                      <span class="font-medium">Me</span>
+                      <span class="font-medium">Je</span>
+                      <span class="font-medium">Ve</span>
+                      <span class="font-medium">Sa</span>
+                      <span class="font-medium">Di</span>
+    
+                      <!-- Jours du mois -->
+                      <span>1</span>
+                      <span>2</span>
+                      <span
+                        class="bg-green-500 text-white w-6 flex items-center justify-center text-center h-6 rounded"
+                        >3</span
+                      >
+                      <span
+                        class="bg-green-500 text-white w-6 flex items-center justify-center text-center h-6 rounded"
+                        >4</span
+                      >
+                      <span
+                        class="bg-green-500 text-white w-6 flex items-center justify-center text-center h-6 rounded"
+                        >5</span
+                      >
+                      <span>6</span>
+                      <span>7</span>
+    
+                      <span>8</span>
+                      <span>9</span>
+                      <span
+                        class="bg-green-500 text-white w-6 flex items-center justify-center text-center h-6 rounded"
+                        >10</span
+                      >
+                      <span>11</span>
+                      <span>12</span>
+                      <span>13</span>
+                      <span>14</span>
+                      <div>15</div>
+                      <span>16</span>
+                      <span>17</span>
+                      <span>18</span>
+                      <span>19</span>
+                      <span>20</span>
+                      <span>21</span>
+    
+                      <span>22</span>
+                      <span>23</span>
+                      <span>24</span>
+                      <span>25</span>
+                      <span>26</span>
+                      <span>27</span>
+                      <span>28</span>
+    
+                      <span>29</span>
+                      <span>30</span>
+                      <span>31</span>
+    
+                      <!-- Jours du mois suivant en opacité 50 -->
+                      <span class="opacity-50">1</span>
+                      <span class="opacity-50">2</span>
+                      <span class="opacity-50">3</span>
+                      <span class="opacity-50">4</span>
+                      <span class="opacity-50">5</span>
+                      <span class="opacity-50">6</span>
+                      <span class="opacity-50">7</span>
+    
+                      <!-- Ajouter les autres jours si nécessaire -->
+                    </div>
+                </div>
+
+                <!-- Détails du jour sélectionné -->
+                <div class="col-span-2 flex flex-col p-4 bg-slate-100 rounded">
+                  <h2 class="text-lg font-bold mb-2">10 Décembre 2024</h2>
+                  <div class="flex flex-col gap-16">
+                    <div class="flex justify-between">
+                      <div class="mb-2 flex flex-col">
+                        <span class="font-semibold">Montant à déposer:</span>
+                        <span class="">34 000 F CFA</span>
+                      </div>
+                      <div class="mb-2 flex flex-col">
+                        <span class="font-semibold">Déposé:</span>
+                        <span class="">0 F CFA</span>
+                      </div>
+                    </div>
+                    <div class="mb-2 flex flex-col">
+                      <span class="font-semibold">COTISATION</span>
+                      <span class="text-red-600">N'est pas à jour</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Calendrier -->
+            </div>
+          </div>
+        </div>
+      </main>
+
+      <!-- Section droite -->
+      <aside class="col-span-1 bg-white shadow-md p-4 rounded-lg">
+        <div class="text-left">
+          <h3 class="text-7xl font-bold text-green-500">8/10</h3>
+          <p class="text-lg font-medium mt-2">DOSSIER PRÉ-ACCEPTÉ</p>
+          <p class="text-gray-600 mt-1">
+            Ce chauffeur semble être éligible au financement 👍
+          </p>
+        </div>
+        <div class="mt-6 space-y-4">
+          <div class="flex bg-slate-100 rounded-lg py-7 px-2 justify-between">
+            <span class="font-medium">Situation familiale:</span>
+            <span class="text-green-500">9/10</span>
+          </div>
+          <div class="flex bg-slate-100 rounded-lg py-7 px-2 justify-between">
+            <span class="font-medium">Capacité de remboursement:</span>
+            <span class="text-yellow-500">6/10</span>
+          </div>
+          <div class="flex bg-slate-100 rounded-lg py-7 px-2 justify-between">
+            <span class="font-medium">Assiduité au travail:</span>
+            <span class="text-green-500">10/10</span>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </body>
+</html>
